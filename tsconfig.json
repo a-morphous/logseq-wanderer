@@ -2,4 +2,11 @@
     "ts-node": {
         "target": "es2021"
     },
+    "compilerOptions": {
+        "target": "ES2021",
+        "jsx": "react",
+        "allowSyntheticDefaultImports": true,
+        "typeRoots": ["node_modules/@logseq"],
+        "moduleResolution": "node"
+    }
 }
