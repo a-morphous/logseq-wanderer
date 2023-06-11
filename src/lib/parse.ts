@@ -181,6 +181,9 @@ export class Parser {
 		// parse metadata
 		const metadata = await this.parseMeta(block, parserOptions.title, parserOptions.date, parserOptions.tags)
 
+		// add block title if it exists
+		finalString = `${metadata.blockTitle ? "#" + metadata.blockTitle + "\n\n" : ""}${finalString.trim()}`
+
 		return {
 			metadata,
 			text: finalString,
